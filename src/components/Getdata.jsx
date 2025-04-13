@@ -3,7 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 function Getdata() {
   const [users, setUsers] = useState([]);
-  const BackEnd_url = "http://localhost:3001";
+  // const BackEnd_url = "http://localhost:3001";
+  const BackEnd_url = 'https://formsusingreact-6.onrender.com';
   const getdata = (e) => {
     axios
       .get(BackEnd_url+"/survey/getusers")

@@ -6,7 +6,8 @@ import axios from "axios";
 const Barchart = () => {
   const [chartData, setChartData] = useState([]);
   const [categories, setCategories] = useState([]);
-const BackEnd_url = "http://localhost:3001";
+// const BackEnd_url = "http://localhost:3001";
+const BackEnd_url = 'https://formsusingreact-6.onrender.com';
   // Fetch data from API
   useEffect(() => {
     const fetchData = async () => {

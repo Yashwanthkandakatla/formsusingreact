@@ -5,7 +5,8 @@ import axios from "axios";
 
 const Piechart = () => {
   const [chartData, setChartData] = useState([]);
-const BackEnd_url = 'http://localhost:3001';
+// const BackEnd_url = 'http://localhost:3001';
+const BackEnd_url = 'https://formsusingreact-6.onrender.com';
   // Fetch data from API
   useEffect(() => {
     const fetchData = async () => {

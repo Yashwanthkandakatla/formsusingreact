@@ -19,7 +19,8 @@ function Student() {
   const [activeComment, setActiveComment] = useState("");
   const [enhancedComment, setEnhancedComment] = useState("");
 const [loading, setLoading] = useState(false);
-const BackEnd_url = 'http://localhost:3001';
+// const BackEnd_url = 'http://localhost:3001';
+const BackEnd_url = 'https://formsusingreact-6.onrender.com';
   // Filter faculties based on the search query
   // const filteredFaculties = faculties.filter((faculty) =>
   //   faculty.name.toLowerCase().includes(searchQuery.toLowerCase())
