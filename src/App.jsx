@@ -17,7 +17,7 @@ import StudentPage from './components/Student';
 // import Dashboard from './components/Dashboard';
 import FacultyPage from './components/PendingLORPage';
 // const FrontEnd_url  = "http://localhost:5173";
-const FrontEnd_url  = "https://frontend-1-14k0.onrender.com";
+const FrontEnd_url  = "https://frontend-2-qrfv.onrender.com";
 function App() {
   return (
     <UserProvider>

@@ -20,7 +20,7 @@ dbConnect();
 
 
 app.use(cors({
-    origin: ["http://localhost:5173","https://frontend-1-14k0.onrender.com"],  // Specify the front-end origin
+    origin: "https://frontend-2-qrfv.onrender.com",  // Specify the front-end origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'] // If your requests involve credentials (e.g., cookies)
   }));
