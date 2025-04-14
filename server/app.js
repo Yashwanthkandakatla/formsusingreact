@@ -20,7 +20,7 @@ dbConnect();
 
 
 app.use(cors({
-    origin: "https://grovnr.netlify.app/",  // Specify the front-end origin
+    origin: "https://grovnr.netlify.app",  // Specify the front-end origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
     allowedHeaders: ['Content-Type', 'Authorization'] // If your requests involve credentials (e.g., cookies)
   }));
