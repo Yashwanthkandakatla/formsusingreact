@@ -5,54 +5,65 @@ import { useState } from 'react'
 // import Header from './components/Header'
 // import Piechart from './components/charts/Piechart'
 // import Login from './components/Login'
-// import Signup from './components/Signup'
+import Signup from './components/Signup'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import ProtectedRoute from './context/ProtectedRoute';
-// import LoginPage from './components/Login';
-import LoginPage from './components/LoginPage';
+import LoginPage from './components/Login';
+// import LoginPage from './components/LoginPage';
 // import AdminPage from './components/AddFaculty';
 import Admin from './components/Admin';
 import StudentPage from './components/Student';
 // import Dashboard from './components/Dashboard';
 import FacultyPage from './components/PendingLORPage';
+import Dash from './components/Dash';
 // const FrontEnd_url  = "http://localhost:5173";
 const FrontEnd_url  = "https://grovnr.netlify.app";
 function App() {
   return (
     <UserProvider>
-      <Router>
-        <Routes>
-      
-          <Route path="/login" element={<LoginPage />} />
-          <Route
-            path="/admin"
-            element={
-              <ProtectedRoute apiEndpoint="{FrontEnd_url}/user/admin">
-                <Admin />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/faculty"
-            element={
-              <ProtectedRoute apiEndpoint="{FrontEnd_url}/user/faculty">
-                <FacultyPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/student"
-            element={
-              <ProtectedRoute apiEndpoint="{FrontEnd_url}/user/student">
-                <StudentPage/>
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/unauthorized" element={<p>Access Denied</p>} />
-        </Routes>
-      </Router>
-    </UserProvider>
+  <Router>
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute
+            apiEndpoint="{FrontEnd_url}/user/admin"
+            requiredRole="Admin"
+          >
+            <Admin />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/faculty"
+        element={
+          <ProtectedRoute
+            apiEndpoint="{FrontEnd_url}/user/faculty"
+            requiredRole="Faculty"
+          >
+            <FacultyPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/student"
+        element={
+          <ProtectedRoute
+            apiEndpoint="{FrontEnd_url}/user/student"
+            requiredRole="Student"
+          >
+            <Dash />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/unauthorized" element={<p>Access Denied</p>} />
+    </Routes>
+  </Router>
+</UserProvider>
+
   );
   
   

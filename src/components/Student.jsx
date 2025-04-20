@@ -242,7 +242,7 @@ const BackEnd_url = 'https://formsusingreact-6.onrender.com';
             <div className="flex items-center gap-4 mb-4">
               <input
                 type="file"
-                name="file"
+                name="file" 
                 onChange={handleFileChange}
                 className="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer focus:outline-none focus:border-blue-500"
               />
@@ -261,29 +261,8 @@ const BackEnd_url = 'https://formsusingreact-6.onrender.com';
               onChange={handleCourseChange}
               className="border border-gray-300 rounded p-2"
             />
-            {/* <button
-            onClick={handleUpload}
-            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition"
-          >
-            Upload
-          </button> */}
-            {/* <button
-  className="cursor-pointer bg-gradient-to-b from-indigo-500 to-indigo-600 shadow-[0px_4px_32px_0_rgba(99,102,241,.70)] px-6 py-3 rounded-xl border-[1px] border-slate-500 text-white font-medium group"
-  onClick={handleUpload}>
-  <div class="relative overflow-hidden">
-    <p
-      class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
-    >
-      Button
-    </p>
-    <p
-      class="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
-    >
-      Button
-    </p>
-  </div>
-</button> */}
-
+            
+            
             <button
               className="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
 border-blue-600
